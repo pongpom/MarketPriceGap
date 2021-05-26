@@ -1,5 +1,0 @@
-name: marketconsoleapp
-description: marketconsoleapp
-runs:
-  using: docker
-  image: Dockerfile
