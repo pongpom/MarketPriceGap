@@ -17,9 +17,9 @@ namespace MarketPriceGap
 
         static void Main(string[] args)
         {
-            // string path = Environment.CurrentDirectory;
-            // string newPath = path;
-            var webhook = Regex.Split(File.ReadAllText(Environment.CurrentDirectory + "/webhook.txt"), "/");
+            string path = Directory.GetCurrentDirectory();
+            string newPath = path;
+            var webhook = Regex.Split(File.ReadAllText("/webhook.txt"), "/");
             var webhookId = ulong.Parse(webhook[0]);
             var token = webhook[1];
             var discord = new Discord(webhookId, token);
