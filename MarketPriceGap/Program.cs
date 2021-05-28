@@ -24,8 +24,8 @@ namespace MarketPriceGap
             var token = webhook[1];
             var discord = new Discord(webhookId, token);
 
-            var interval = int.Parse(File.ReadAllText(newPath + "/interval.txt"));
-            var pairs = Regex.Split(File.ReadAllText(newPath + "/pair.txt"), "\r\n");
+            int interval = 5000;
+            string[] pairs = { "BTCUSDT" };
             // ReSharper disable once IdentifierTypo
             Dictionary<string, int> gaplist = new Dictionary<string, int>();
 
